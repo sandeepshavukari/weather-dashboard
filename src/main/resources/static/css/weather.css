@@ -1,0 +1,174 @@
+/* Glassmorphism + Modern Weather UI for Weather Dashboard */
+body {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #222b45;
+    letter-spacing: 0.01em;
+}
+
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 12px #b3cdf433;
+}
+
+.navbar {
+    background: rgba(34, 139, 230, 0.90) !important;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 6px 24px 0 rgba(60,72,89,0.12);
+}
+
+.weather-box {
+    background: rgba(255,255,255,0.72);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(60,72,89,0.18), 0 1.5px 4.5px 0 rgba(60,72,89,0.10);
+    padding: 2.7rem 2rem;
+    margin-top: 2.8rem;
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(200, 230, 255, 0.24);
+    transition: box-shadow 0.22s, background 0.22s;
+}
+
+.weather-box:hover {
+    box-shadow: 0 12px 36px 0 rgba(80,112,170,0.25), 0 4px 12px 0 rgba(80,112,170,0.18);
+    background: rgba(255,255,255,0.86);
+}
+
+.weather-icon {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 1.2rem auto;
+    display: block;
+    filter: drop-shadow(0 2px 6px #b5daff77);
+}
+
+.input-group .form-control {
+    background: rgba(240, 248, 255, 0.65);
+    border-radius: 16px 0 0 16px;
+    border: 1.7px solid #90c4f9;
+    font-size: 1.07em;
+    transition: border-color 0.21s, box-shadow 0.21s;
+}
+.input-group .form-control:focus {
+    border-color: #1fa5ff;
+    box-shadow: 0 0 0 2.5px #1fa5ff45;
+    background: #fafdff;
+}
+.input-group .btn-primary {
+    border-radius: 0 16px 16px 0;
+    background: linear-gradient(90deg, #009ffd 0%, #2a72e3 100%);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 1.45rem;
+    box-shadow: 0 2px 10px #8ed8ff44;
+}
+
+.unit-btn {
+    width: 95px;
+    border-radius: 21px;
+    margin: 0 7px;
+    border: 1.7px solid #22a2eb;
+    background: #fafdff;
+    color: #1682b6;
+    font-weight: 500;
+    transition: background 0.19s, color 0.19s, border 0.19s;
+}
+
+.btn-outline-secondary.unit-btn.active,
+.btn-outline-secondary.unit-btn:active,
+.btn-outline-secondary.unit-btn:focus,
+.btn-outline-secondary.unit-btn:hover {
+    background: linear-gradient(90deg, #009ffd 0%, #2a72e3 100%);
+    color: #fff;
+    border-color: #009ffd;
+}
+
+#map {
+    height: 350px;
+    margin-top: 2.3rem;
+    border-radius: 14px;
+    border: 2px solid #b6eaff;
+    box-shadow: 0 3px 18px #b6eaff55;
+}
+
+.error {
+    color: #f44336;
+    font-weight: 600;
+    font-size: 1.13em;
+    margin-top: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    background: rgba(255,0,0,0.06);
+    border-radius: 10px;
+    padding: 0.6em 0;
+}
+
+.search-history {
+    margin-top: 2.5rem;
+}
+
+.list-group-item-action {
+    cursor: pointer;
+    transition: background 0.16s, color 0.16s;
+    border-radius: 8px;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+    background: #e5f3ff;
+    color: #009ffd;
+    font-weight: 600;
+}
+
+.list-group-item {
+    border: none;
+    background: rgba(245,250,255,0.92);
+    margin-bottom: 0.2rem;
+    border-radius: 8px;
+    padding: 0.8rem 1.3rem;
+}
+
+.list-group-item a {
+    color: #009ffd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.list-group-item a:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+input:-webkit-autofill {
+    background: #e9f6ff !important;
+}
+
+::-webkit-input-placeholder { color: #8ea6c6; }
+::-moz-placeholder { color: #8ea6c6; }
+:-ms-input-placeholder { color: #8ea6c6; }
+::placeholder { color: #8ea6c6; }
+
+#suggestions {
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 4px 16px #bce6ff55;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+    border: 1.7px solid #b6eaff;
+}
+
+@media (max-width: 600px) {
+    .weather-box {
+        padding: 1.2rem 0.6rem;
+    }
+    .unit-btn {
+        width: 72px;
+    }
+    #map {
+        height: 180px;
+    }
+}
